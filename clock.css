@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  font-size: 1.3rem;
+}
+body {
+    /* background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(16, 69, 214, 0.9212418243664653) 10%,
+    rgba(0, 212, 255, 1) 100%
+  ); */
+  overflow: hidden;
+}
+.clock {
+    position: relative;
+    width: 600px;
+    height: 570px;
+    background-color: rgba(234, 237, 245, 0.776);
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 3px solid #000;
+}
+.number {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    --rotation: 0;
+    transform: rotate(var(--rotation));
+}
+.smallnum {
+    /* position: absolute; */
+    /* width: 100%;
+    height: 100%; */
+    /* margin-left: 15px;
+    margin-top: 10px; */
+    font-size: 0.6rem;
+    text-align: center;
+    color: rgb(4, 4, 160);
+    --rotation: 0;
+    transform: rotate(var(--rotation));
+}
+.small1 { --rotation: 6deg;}
+.small2 { --rotation: 12deg;}  
+.small3 { --rotation: 18deg;}
+.small4 { --rotation: 24deg;}
+.small6 { --rotation: 36deg;}
+.small7 { --rotation: 42deg;}
+.small8 { --rotation: 48deg;}
+.small9 { --rotation: 54deg;}
+.small11 { --rotation: 66deg;}
+.small12 { --rotation: 72deg;}
+.small13 { --rotation: 78deg;}
+.small14 { --rotation: 84deg;}
+.small16 { --rotation: 96deg;}
+.small17 { --rotation: 102deg;}
+.small18 { --rotation: 108deg;}
+.small19 { --rotation: 114deg;}
+.small21 { --rotation: 126deg;}
+.small22 { --rotation: 132deg;}
+.small23 { --rotation: 138deg;}
+.small24 { --rotation: 144deg;}
+.small26 { --rotation: 156deg;}
+.small27 { --rotation: 162deg;}
+.small28 { --rotation: 168deg;}
+.small29 { --rotation: 174deg;}
+.small31 { --rotation: 186deg;}
+.small32 { --rotation: 192deg;}
+.small33 { --rotation: 198deg;}
+.small34 { --rotation: 204deg;}
+.small36 { --rotation: 216deg;}
+.small37 { --rotation: 222deg;}
+.small38 { --rotation: 228deg;}
+.small39 { --rotation: 234deg;}
+.small41 { --rotation: 246deg;}
+.small42 { --rotation: 252deg;}
+.small43 { --rotation: 258deg;}
+.small44 { --rotation: 264deg;}
+.small46 { --rotation: 276deg;}
+.small47 { --rotation: 282deg;}
+.small48 { --rotation: 288deg;}
+.small49 { --rotation: 294deg;}
+.small51 { --rotation: 306deg;}
+.small52 { --rotation: 312deg;}
+.small53 { --rotation: 318deg;}
+.small54 { --rotation: 324deg;}
+.small56 { --rotation: 336deg;}
+.small57 { --rotation: 342deg;}
+.small58 { --rotation: 348deg;}
+.small59 { --rotation: 354deg;}
+
+
+.number1 {
+    --rotation: 30deg;
+}
+.number2 {
+    --rotation: 60deg;
+}
+.number3 {
+    --rotation: 90deg;
+}
+.number4 {
+    --rotation: 120deg;
+}
+.number5 {
+    --rotation: 150deg;
+}
+.number6 {
+    --rotation: 180deg;
+}
+.number7 {
+    --rotation: 210deg;
+}
+.number8 {
+    --rotation: 240deg;
+}
+.number9 {
+    --rotation: 270deg;
+}
+.number10 {
+    --rotation: 300deg;
+}
+.number11 {
+    --rotation: 330deg;
+}
+.number12 {
+    --rotation: 360deg;
+}
+.hand {
+    position: absolute;
+    background-color: rgb(11, 11, 1);
+   
+    left: 50%;
+    bottom: 50%;
+    transform: translatex(-40%) rotate(calc(var(--rotation)* 1deg));
+    --rotation: 0;
+    transform-origin: bottom;
+    border: 1px solid #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 10;
+}
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    z-index: 11;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+.hour {
+    width: 13px;
+    height: 35%;
+}
+.minute {
+    width: 9px;
+    height: 41%;
+    background-color: #0e0101;
+    /* box-shadow:  6px -6px 8px #a9a9a9,
+             -6px 6px 8px #ffffff; */
+    
+}
+.second {
+    width: 5px;
+    height: 45%;
+    background-color: rgb(229, 69, 69);
+}
+@media (max-width:400px) {
+    body {
+        overflow: hidden;
+    }
+    .clock {
+        overflow: hidden;
+        width: 350px;
+        height: 350px;
+    }
+    .number {
+        font-size: 1rem;
+    }
+}
